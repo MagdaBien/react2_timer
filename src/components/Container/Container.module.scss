@@ -1,0 +1,11 @@
+@import '../../styles/settings.scss';
+
+.container { 
+ 
+    margin: 20px auto;
+    padding: 0 20px 0 20px;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+  
+}
