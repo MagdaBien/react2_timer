@@ -12,8 +12,9 @@ const App = () => {
   const [counter, setCounter] = useState('');
 
   const startTime = () => {  
+    if(counter) clearInterval(counter);
       setCounter(setInterval(() => {
-        setTime(prevValue => prevValue + 1); 
+      setTime(prevValue => prevValue + 1); 
       }, interval));
     };
 

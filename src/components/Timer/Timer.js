@@ -12,11 +12,11 @@ const Timer = props => {
         minutes = minutes % 60;
         hours = hours % 24;
     
-        return `${padTo2Digits(hours)}:${padTo2Digits(minutes)}:${padTo2Digits(seconds, )}.${millisec}`;
+        return `${padTo2Digits(hours)}:${padTo2Digits(minutes)}:${padTo2Digits(seconds)}.${padTo2Digits(millisec,3)}`;
       }  
       
-    function padTo2Digits(num) {
-        return num.toString().padStart(2, '0');
+    function padTo2Digits(num, lenght=2) {
+        return num.toString().padStart(lenght, '0');
     }  
 
     return (<h1 className={styles.time}> { milisecondsToTime(props.miliseconds)}</h1>);
